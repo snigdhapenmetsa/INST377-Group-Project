@@ -1,10 +1,10 @@
 async function getDefinition() {
     let word = document.getElementById('wordInput').value;
-    if(word) {
+    if (word) {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         const data = await response.json();
 
-        if(data && !data.title) { // Check if the response contains word data
+        if (data && !data.title) { // Check if the response contains word data
             displayResult(data[0]);
         } else {
             document.getElementById('result').innerHTML = 'No definition found.';
@@ -17,22 +17,28 @@ async function getDefinition() {
 function displayResult(data) {
     let htmlContent = `<h2>Results for "${data.word}":</h2>`;
 
-    // Definitions
-    htmlContent += '<h3>Definitions:</h3>';
+    // Origin
+    if(data.origin) {
+        htmlContent += `<p><b>Origin:</b> ${data.origin}</p>`;
+    }
+
+    // Meanings (Definitions, Examples, Part of Speech)
     data.meanings.forEach(meaning => {
+        htmlContent += `<h3>${meaning.partOfSpeech}:</h3>`;
         meaning.definitions.forEach(def => {
-            htmlContent += `<p><b>${meaning.partOfSpeech}:</b> ${def.definition}</p>`;
+            htmlContent += `<p><b>Definition:</b> ${def.definition}</p>`;
             if(def.example) {
                 htmlContent += `<p><i>Example:</i> ${def.example}</p>`;
             }
+            // Synonyms and Antonyms
+            if(def.synonyms.length > 0) {
+                htmlContent += `<p><b>Synonyms:</b> ${def.synonyms.join(', ')}</p>`;
+            }
+            if(def.antonyms.length > 0) {
+                htmlContent += `<p><b>Antonyms:</b> ${def.antonyms.join(', ')}</p>`;
+            }
         });
     });
-
-    // Synonyms
-    if(data.meanings[0].synonyms.length > 0) {
-        htmlContent += '<h3>Synonyms:</h3>';
-        htmlContent += `<p>${data.meanings[0].synonyms.join(', ')}</p>`;
-    }
 
     // Pronunciation
     if(data.phonetics.length > 0 && data.phonetics[0].audio) {
