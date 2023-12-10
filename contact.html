@@ -1,10 +1,5 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>Dictionary API Project</title>
-
     <style>
-
         body{
             background-color: tan;
         }
@@ -29,7 +24,7 @@
             background-color: gray;
             color: white;
         }
-        .DefButton {
+        .SubButton {
                 align-items: center;
                 background-color: #0A66C2;
                 border: 0;
@@ -59,40 +54,46 @@
                 margin-top: 5px;
                 margin-bottom: 5px;
             }
-            .DefButton:hover,
-            .DefButton:focus { 
+            .SubButton:hover,
+            .SubButton:focus { 
             background-color: #16437E;
             color: #ffffff;
             }
-            .DefButton:active {
+            .SubButton:active {
             background: #09223b;
             color: rgb(255, 255, 255, .7);
             }
-            .DefButton:disabled { 
+            .SubButton:disabled { 
             cursor: not-allowed;
             background: rgba(0, 0, 0, .08);
             color: rgba(0, 0, 0, .3);
             }
     </style>
-</head>
-<body>
-    <header id="bar">
-        <h1>Dictionary Lookup</h1>
-    </header>
 
-    <nav id="main-nav">
-        <ul>
-            <a href="file:///C:/Users/logan/OneDrive/Documents/INST377/INST377-Group-Project/about.html"><li>About</li></a>
-            <a href="file:///C:/Users/logan/OneDrive/Documents/INST377/INST377-Group-Project/contact.html"><li>Contact</li></a>
-        </ul>
-    </nav>
+    <body>
+        <header id="bar">
+            <h1>Contact Page</h1>
+        </header>
+    
+        <nav id="main-nav">
+            <ul>
+                <a href="file:///C:/Users/logan/OneDrive/Documents/INST377/INST377-Group-Project/index.html"><li>Dictionary</li></a>
+                <a href="file:///C:/Users/logan/OneDrive/Documents/INST377/INST377-Group-Project/about.html"><li>About</li></a>
+            </ul>
+        </nav>
 
-    <input type="text" id="wordInput" placeholder="Enter a word...">
-    <button onclick="getDefinition()" class="DefButton">Get Definition</button>
-    <div id="result">
-        <!-- Results will be displayed here -->
-    </div>
+        <form name="ContactForm" action="" method="POST">
 
-    <script src="index.js"></script>
-</body>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Name goes here"><br>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter email"><br>
+
+            <label for="issue">Issue Description:</label>
+            <textarea id="issue" name="IssueDescription" rows="4" cols="50"></textarea><br>
+
+            <button class="SubButton">Submit</button>
+        </form>
+    </body>
 </html>

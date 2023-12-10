@@ -1,0 +1,114 @@
+<html>
+
+    <style>
+        body{
+            background-color: tan;
+        }
+        #bar {
+                text-align: center;
+                background-color: darkred;
+                color: white;
+                margin: 5px 0px 5px 0px;
+        }
+        #main-nav {
+            background-color: darkred;
+        }
+        #main-nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            text-align: center;
+            width: 48%;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        #main-nav li:hover {
+            background-color: gray;
+            color: white;
+        }
+        .DefButton {
+                align-items: center;
+                background-color: #0A66C2;
+                border: 0;
+                border-radius: 100px;
+                box-sizing: border-box;
+                color: #ffffff;
+                cursor: pointer;
+                display: inline-flex;
+                font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+                justify-content: center;
+                line-height: 20px;
+                max-width: 480px;
+                min-height: 40px;
+                min-width: 0px;
+                overflow: hidden;
+                padding: 0px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+                touch-action: manipulation;
+                transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+                user-select: none;
+                -webkit-user-select: none;
+                vertical-align: middle;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            .DefButton:hover,
+            .DefButton:focus { 
+            background-color: #16437E;
+            color: #ffffff;
+            }
+            .DefButton:active {
+            background: #09223b;
+            color: rgb(255, 255, 255, .7);
+            }
+            .DefButton:disabled { 
+            cursor: not-allowed;
+            background: rgba(0, 0, 0, .08);
+            color: rgba(0, 0, 0, .3);
+            }
+        #about {
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+    <body>
+        <header id="bar">
+            <h1>About Page</h1>
+        </header>
+    
+        <nav id="main-nav">
+            <ul>
+                <a href="file:///C:/Users/logan/OneDrive/Documents/INST377/INST377-Group-Project/index.html"><li>Dictionary</li></a>
+                <a href="file:///C:/Users/logan/OneDrive/Documents/INST377/INST377-Group-Project/contact.html"><li>Contact</li></a>
+            </ul>
+        </nav>
+
+        <h2 id="about">About:</h2>
+
+        <p>When someone does not know the meaning of a word or phrase, they usually just use
+            Google to find its definition. However, they miss out on many key details of the
+            word/phrase like synonyms, pronunciation, and concrete examples. This causes the
+            user to not get a full understanding of the word or phrase. We are planning to create an
+            HTML page where the user can enter a word/phrase and get a complete understanding
+            by providing as much information as possible about the word/phrase. We hope that this
+            website will help experienced English speakers learn more about the language, and
+            also allow new learners to gain a thorough understanding of every aspect of the word.
+            Whether it is a higher education student using our website to write more eloquent
+            papers, or someone new to the language trying to gain a better understand of the
+            English languages extensive verbage, we hope our website will satisfy a vast variety of
+            stakeholder needs. Learning a new language, specifically English can be very daunting,
+            so by incorporating multiple facets of different words such as synonyms, how to
+            pronounce them, and phonetic spelling, we hope to help learners not feel bombarded by
+            the many sources of information online.he information problem we are addressing is
+            the issue of information overload for new language learners or new technology users.
+            We hope to establish a “one-stop shop” for the English language. We are working with a
+            dictionary API (https://dictionaryapi.dev/). The API will get us definitions, synonyms,
+            pronunciation, and examples. The front end will be a simple input of the word through a
+            text box, and when submitted it will return the data from the API backend such as
+            definition, synonyms and antonyms.</p>
+    </body>
+</html>
