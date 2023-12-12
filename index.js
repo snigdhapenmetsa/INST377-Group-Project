@@ -4,6 +4,8 @@ async function getDefinition() {
         const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
         const data = await response.json();
 
+        var box = document.getElementById('result');
+        box.style.display = 'block';
         if (data && !data.title) { // Check if the response contains word data
             displayResult(data[0]);
         } else {
