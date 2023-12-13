@@ -4,13 +4,15 @@
             background-color: tan;
         }
         #bar {
-                text-align: center;
-                background-color: darkred;
-                color: white;
-                margin: 5px 0px 5px 0px;
+            text-align: center;
+            background-color: darkred;
+            color: white;
+            margin: 10px auto;
+            max-width: 30%;
         }
         #main-nav {
             background-color: darkred;
+            width: 100%;
         }
         #main-nav ul li {
             list-style-type: none;
@@ -25,49 +27,57 @@
             color: white;
         }
         .SubButton {
-                align-items: center;
-                background-color: #0A66C2;
-                border: 0;
-                border-radius: 100px;
-                box-sizing: border-box;
-                color: #ffffff;
-                cursor: pointer;
-                display: inline-flex;
-                font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-                font-size: 16px;
-                font-weight: 600;
-                justify-content: center;
-                line-height: 20px;
-                max-width: 480px;
-                min-height: 40px;
-                min-width: 0px;
-                overflow: hidden;
-                padding: 0px;
-                padding-left: 20px;
-                padding-right: 20px;
-                text-align: center;
-                touch-action: manipulation;
-                transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-                user-select: none;
-                -webkit-user-select: none;
-                vertical-align: middle;
-                margin-top: 5px;
-                margin-bottom: 5px;
-            }
-            .SubButton:hover,
-            .SubButton:focus { 
+            align-items: center;
+            background-color: #0A66C2;
+            border: 0;
+            border-radius: 100px;
+            box-sizing: border-box;
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            justify-content: center;
+            line-height: 20px;
+            max-width: 480px;
+            min-height: 40px;
+            min-width: 0px;
+            overflow: hidden;
+            padding: 10px;
+            text-align: center;
+            touch-action: manipulation;
+            transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+            user-select: none;
+            -webkit-user-select: none;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .SubButton:hover,
+        .SubButton:focus { 
             background-color: #16437E;
             color: #ffffff;
-            }
-            .SubButton:active {
+        }
+        .SubButton:active {
             background: #09223b;
             color: rgb(255, 255, 255, .7);
-            }
-            .SubButton:disabled { 
+        }
+        .SubButton:disabled { 
             cursor: not-allowed;
             background: rgba(0, 0, 0, .08);
             color: rgba(0, 0, 0, .3);
-            }
+        }
+        label[for="name"] {
+            margin: 5px;
+        }
+        label[for="email"] {
+            margin: 5px;
+        }
+        label[for="issue"] {
+            display: block;
+            margin: 5px;
+        }
     </style>
 
     <body>
@@ -77,13 +87,12 @@
     
         <nav id="main-nav">
             <ul>
-                <a href="index.html"><li>Dictionary</li></a>
-                <a href="about.html"><li>About</li></a>
+                <a href="index.html" style="color: white;"><li>Dictionary</li></a>
+                <a href="about.html" style="color: white;"><li>About</li></a>
             </ul>
         </nav>
 
         <form name="ContactForm" action="" method="POST">
-
             <label for="name">Name:</label>
             <input type="text" id="name" placeholder="Name goes here"><br>
 

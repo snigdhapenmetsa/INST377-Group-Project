@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Dictionary API Project</title>
-
-    <style>
-
-        body{
-            background-color: tan;
-        }
-        #bar {
+    <head>
+        <title>Dictionary API Project</title>
+        <style>
+            body{
+                background-color: tan;
+            }
+            #bar {
                 text-align: center;
                 background-color: darkred;
                 color: white;
-                margin: 5px 0px 5px 0px;
-        }
-        #main-nav {
-            background-color: darkred;
-        }
-        #main-nav ul li {
-            list-style-type: none;
-            display: inline-block;
-            text-align: center;
-            width: 48%;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-        #main-nav li:hover {
-            background-color: gray;
-            color: white;
-        }
-        .DefButton {
+                margin: 10px auto;
+                max-width: 30%;
+            }
+            #main-nav {
+                background-color: darkred;
+                width: 100%;
+            }
+            #main-nav ul li {
+                list-style-type: none;
+                display: inline-block;
+                text-align: center;
+                width: 48%;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            #main-nav li:hover {
+                background-color: gray;
+                color: white;
+            }
+            #wordInput{
+                margin-left: 10px;
+            }
+            .DefButton {
                 align-items: center;
                 background-color: #0A66C2;
                 border: 0;
@@ -47,9 +50,7 @@
                 min-height: 40px;
                 min-width: 0px;
                 overflow: hidden;
-                padding: 0px;
-                padding-left: 20px;
-                padding-right: 20px;
+                padding: 10px;
                 text-align: center;
                 touch-action: manipulation;
                 transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
@@ -61,48 +62,49 @@
             }
             .DefButton:hover,
             .DefButton:focus { 
-            background-color: #16437E;
-            color: #ffffff;
+                background-color: #16437E;
+                color: #ffffff;
             }
             .DefButton:active {
-            background: #09223b;
-            color: rgb(255, 255, 255, .7);
+                background: #09223b;
+                color: rgb(255, 255, 255, .7);
             }
             .DefButton:disabled { 
-            cursor: not-allowed;
-            background: rgba(0, 0, 0, .08);
-            color: rgba(0, 0, 0, .3);
+                cursor: not-allowed;
+                background: rgba(0, 0, 0, .08);
+                color: rgba(0, 0, 0, .3);
             }
             #result {
                 display: none;
                 max-width: 100%;
-                padding: 20px;
+                padding: 0px 10px 20px 10px;
                 border: 2px solid #ccc;
                 border-radius: 10px;
                 margin: 20px;
                 box-sizing: border-box;
                 background-color: #E6D9AF;
             }
-    </style>
-</head>
-<body>
-    <header id="bar">
-        <h1>Dictionary Lookup</h1>
-    </header>
+        </style>
+    </head>
+    
+    <body>
+        <header id="bar">
+            <h1>Dictionary Lookup</h1>
+        </header>
 
-    <nav id="main-nav">
-        <ul>
-            <a href="about.html"><li>About</li></a>
-            <a href="contact.html"><li>Contact</li></a>
-        </ul>
-    </nav>
+        <nav id="main-nav">
+            <ul>
+                <a href="about.html" style="color: white;"><li>About</li></a>
+                <a href="contact.html" style="color: white;"><li>Contact</li></a>
+            </ul>
+        </nav>
 
-    <input type="text" id="wordInput" placeholder="Enter a word...">
-    <button onclick="getDefinition()" class="DefButton">Get Definition</button>
-    <div id="result">
-        <!-- Results will be displayed here -->
-    </div>
+        <input type="text" id="wordInput" placeholder="Enter a word...">
+        <button onclick="getDefinition()" class="DefButton">Get Definition</button>
+        <div id="result">
+            <!-- Results will be displayed here -->
+        </div>
 
-    <script src="index.js"></script>
-</body>
+        <script src="index.js"></script>
+    </body>
 </html>
