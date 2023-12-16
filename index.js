@@ -6,7 +6,7 @@ async function getDefinition() {
 
         var box = document.getElementById('result');
         box.style.display = 'block';
-        if (data && !data.title) { // Check if the response contains word data
+        if (data && !data.title) {
             displayResult(data[0]);
         } else {
             document.getElementById('result').innerHTML = 'No definition found.';
@@ -42,7 +42,6 @@ function displayResult(data) {
         });
     });
 
-    // Pronunciation
     if(data.phonetics.length > 0 && data.phonetics[0].audio) {
         htmlContent += '<h3>Pronunciation:</h3>';
         htmlContent += `<audio controls><source src="${data.phonetics[0].audio}" type="audio/mpeg"></audio>`;
