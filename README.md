@@ -2,7 +2,6 @@
 
 # Group Members: Eli Dross, Snigdha Penmetsa, Jake Lehning
 
-
 # Dictionary Lookup Web Application
 
 ## Description
@@ -11,6 +10,7 @@ The Dictionary Lookup Web Application is designed to provide users with detailed
 
 ## Target Browsers
 
+- Microsoft Edge
 - Google Chrome (latest version)
 - Mozilla Firefox (latest version)
 - Safari on iOS (latest version)
@@ -33,12 +33,7 @@ This manual is intended for future developers who wish to maintain or upgrade th
 
 ### Running the Application
 
-- Start the server using `node server.js`.
-- Access the application at `http://localhost:3000`.
-
-### Running Tests
-
-- Run `npm test` to execute test cases.
+- Navigate to: [Dictionary API Project (inst-377-group-project-ax5t6zwav-snigdha-penmetsas-projects.vercel.app)](https://inst-377-group-project-ax5t6zwav-snigdha-penmetsas-projects.vercel.app/)
 
 ### API Documentation
 
