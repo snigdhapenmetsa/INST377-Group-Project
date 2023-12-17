@@ -1,82 +1,79 @@
 <html>
     <style>
-        body{
-            background-color: tan;
+        body {
+            background-color: #fdf6e3;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
         #bar {
             text-align: center;
-            background-color: darkred;
+            background-color: #ff6f61;
             color: white;
-            margin: 10px auto;
-            max-width: 30%;
+            padding: 20px 0;
         }
         #main-nav {
-            background-color: darkred;
-            width: 100%;
+            background-color: #ff6f61;
+            overflow: hidden;
+        }
+        #main-nav ul {
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+            text-align: center;
         }
         #main-nav ul li {
-            list-style-type: none;
             display: inline-block;
-            text-align: center;
-            width: 48%;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding: 10px 20px;
         }
-        #main-nav li:hover {
-            background-color: gray;
+        #main-nav a {
+            text-decoration: none;
             color: white;
         }
-        .SubButton {
-            align-items: center;
-            background-color: #0A66C2;
-            border: 0;
-            border-radius: 100px;
-            box-sizing: border-box;
-            color: #ffffff;
-            cursor: pointer;
-            display: inline-flex;
-            font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            font-weight: 600;
-            justify-content: center;
-            line-height: 20px;
-            max-width: 480px;
-            min-height: 40px;
-            min-width: 0px;
-            overflow: hidden;
-            padding: 10px;
-            text-align: center;
-            touch-action: manipulation;
-            transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-            user-select: none;
-            -webkit-user-select: none;
-            vertical-align: middle;
-            margin-top: 10px;
-            margin-bottom: 5px;
+        #main-nav ul li:hover {
+            background-color: #ff9560;
         }
-        .SubButton:hover,
-        .SubButton:focus { 
-            background-color: #16437E;
-            color: #ffffff;
+        .SubButton {
+            display: block;
+            width: auto;
+            padding: 12px 24px;
+            margin: 10px auto;
+            background-color: #4db6ac;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+        .SubButton:hover {
+            background-color: #339989;
         }
         .SubButton:active {
-            background: #09223b;
-            color: rgb(255, 255, 255, .7);
+            background-color: #2b7a78;
         }
-        .SubButton:disabled { 
-            cursor: not-allowed;
-            background: rgba(0, 0, 0, .08);
-            color: rgba(0, 0, 0, .3);
-        }
-        label[for="name"] {
-            margin: 5px;
-        }
-        label[for="email"] {
-            margin: 5px;
-        }
-        label[for="issue"] {
+        label[for="name"], label[for="email"], label[for="issue"] {
             display: block;
-            margin: 5px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        input[type="text"], textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            resize: vertical;
+        }
+        .form-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
 
@@ -87,22 +84,24 @@
     
         <nav id="main-nav">
             <ul>
-                <a href="index.html" style="color: white;"><li>Dictionary</li></a>
-                <a href="about.html" style="color: white;"><li>About</li></a>
+                <a href="index.html"><li>Dictionary</li></a>
+                <a href="about.html"><li>About</li></a>
             </ul>
         </nav>
 
-        <form name="ContactForm" action="" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Name goes here"><br>
+        <div class="form-container">
+            <form name="ContactForm" action="" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Name goes here"><br>
 
-            <label for="email">Email:</label>
-            <input type="text" id="email" placeholder="Enter email"><br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="Enter email"><br>
 
-            <label for="issue">Issue Description:</label>
-            <textarea id="issue" name="IssueDescription" rows="4" cols="50"></textarea><br>
+                <label for="issue">Issue Description:</label>
+                <textarea id="issue" name="IssueDescription" rows="4" cols="50"></textarea><br>
 
-            <button class="SubButton">Submit</button>
-        </form>
+                <button class="SubButton">Submit</button>
+            </form>
+        </div>
     </body>
 </html>

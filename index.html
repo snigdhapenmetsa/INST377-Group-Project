@@ -3,87 +3,82 @@
     <head>
         <title>Dictionary API Project</title>
         <style>
-            body{
-                background-color: tan;
+            body {
+                background-color: #fdf6e3;
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                margin: 0;
+                padding: 0;
             }
+
             #bar {
                 text-align: center;
-                background-color: darkred;
+                background-color: #ff6f61;
                 color: white;
-                margin: 10px auto;
-                max-width: 30%;
+                padding: 20px 0;
             }
             #main-nav {
-                background-color: darkred;
-                width: 100%;
+                background-color: #ff6f61;
+                overflow: hidden;
+            }
+            #main-nav ul {
+                padding: 0;
+                list-style-type: none;
+                margin: 0;
+                text-align: center;
             }
             #main-nav ul li {
-                list-style-type: none;
                 display: inline-block;
-                text-align: center;
-                width: 48%;
-                padding-top: 5px;
-                padding-bottom: 5px;
+                padding: 10px 20px;
             }
-            #main-nav li:hover {
-                background-color: gray;
+            #main-nav a {
+                text-decoration: none;
                 color: white;
             }
-            #wordInput{
-                margin-left: 10px;
+            #main-nav ul li:hover {
+                background-color: #ff9560;
+            }
+            #wordInput {
+                display: block;
+                width: 80%;
+                padding: 10px;
+                margin: 20px auto;
+                border-radius: 5px;
+                border: 1px solid #ccc;
             }
             .DefButton {
-                align-items: center;
-                background-color: #0A66C2;
-                border: 0;
-                border-radius: 100px;
-                box-sizing: border-box;
-                color: #ffffff;
-                cursor: pointer;
-                display: inline-flex;
-                font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+                display: block;
+                padding: 12px 24px;
+                margin: 10px auto;
+                background-color: #4db6ac;
+                color: white;
+                border: none;
+                border-radius: 25px;
                 font-size: 16px;
-                font-weight: 600;
-                justify-content: center;
-                line-height: 20px;
-                max-width: 480px;
-                min-height: 40px;
-                min-width: 0px;
-                overflow: hidden;
-                padding: 10px;
-                text-align: center;
-                touch-action: manipulation;
-                transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-                user-select: none;
-                -webkit-user-select: none;
-                vertical-align: middle;
-                margin-top: 5px;
-                margin-bottom: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
             }
-            .DefButton:hover,
-            .DefButton:focus { 
-                background-color: #16437E;
-                color: #ffffff;
+
+            .DefButton:hover {
+                background-color: #339989;
+                box-shadow: 0 6px 12px 0 rgba(0,0,0,0.3);
             }
+
             .DefButton:active {
-                background: #09223b;
-                color: rgb(255, 255, 255, .7);
-            }
-            .DefButton:disabled { 
-                cursor: not-allowed;
-                background: rgba(0, 0, 0, .08);
-                color: rgba(0, 0, 0, .3);
+                background-color: #2b7a78;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
             }
             #result {
-                display: none;
-                max-width: 100%;
-                padding: 0px 10px 20px 10px;
-                border: 2px solid #ccc;
+                max-width: 80%;
+                margin: 20px auto;
+                padding: 20px;
                 border-radius: 10px;
-                margin: 20px;
-                box-sizing: border-box;
-                background-color: #E6D9AF;
+                background-color: white;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                display: none;
             }
+
         </style>
     </head>
     
@@ -94,8 +89,8 @@
 
         <nav id="main-nav">
             <ul>
-                <a href="about.html" style="color: white;"><li>About</li></a>
-                <a href="contact.html" style="color: white;"><li>Contact</li></a>
+                <a href="about.html"><li>About</li></a>
+                <a href="contact.html"><li>Contact</li></a>
             </ul>
         </nav>
 
