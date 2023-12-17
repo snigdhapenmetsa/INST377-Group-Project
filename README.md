@@ -33,7 +33,7 @@ This manual is intended for future developers who wish to maintain or upgrade th
 
 ### Running the Application
 
-- Navigate to: [Dictionary API Project (inst-377-group-project-ax5t6zwav-snigdha-penmetsas-projects.vercel.app)](https://inst-377-group-project-ax5t6zwav-snigdha-penmetsas-projects.vercel.app/)
+- Navigate to: **[https://inst-377-group-project-snigdha-penmetsas-projects.vercel.app/](https://inst-377-group-project-snigdha-penmetsas-projects.vercel.app/)**
 
 ### API Documentation
 
