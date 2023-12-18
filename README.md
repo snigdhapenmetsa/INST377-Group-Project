@@ -24,6 +24,7 @@ The Dictionary Lookup Web Application is designed to provide users with detailed
 ### Introduction
 
 This manual is intended for future developers who wish to maintain or upgrade this web application.
+Follow the instructions below step by step and should be able to run this website.
 
 ### Installation
 

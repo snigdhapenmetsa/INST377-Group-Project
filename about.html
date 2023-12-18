@@ -2,25 +2,34 @@
     <style>
         body {
             background-color: #fdf6e3;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
         #bar {
             text-align: center;
             background-color: #ff6f61;
             color: white;
-            margin: 10px auto;
-            max-width: 30%;
+            padding: 20px 0;
         }
         #main-nav {
             background-color: #ff6f61;
-            width: 100%;
+            overflow: hidden;
+        }
+        #main-nav ul {
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+            text-align: center;
         }
         #main-nav ul li {
-            list-style-type: none;
             display: inline-block;
-            text-align: center;
-            width: 48%;
-            padding-top: 5px;
-            padding-bottom: 5px;
+            padding: 10px 20px;
+        }
+        #main-nav a {
+            text-decoration: none;
+            color: white;
         }
         #main-nav li:hover {
             background-color: #ff9560;
