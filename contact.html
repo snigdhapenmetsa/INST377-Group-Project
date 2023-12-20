@@ -88,20 +88,76 @@
                 <a href="about.html"><li>About</li></a>
             </ul>
         </nav>
-
         <div class="form-container">
-            <form name="ContactForm" action="" method="POST">
+            <form name="ContactForm" onsubmit="addContact(event)">
                 <label for="name">Name:</label>
-                <input type="text" id="name" placeholder="Name goes here"><br>
+                <input type="text" id="name" placeholder="Name goes here" required><br>
 
                 <label for="email">Email:</label>
-                <input type="text" id="email" placeholder="Enter email"><br>
+                <input type="text" id="email" placeholder="Enter email" required><br>
 
                 <label for="issue">Issue Description:</label>
-                <textarea id="issue" name="IssueDescription" rows="4" cols="50"></textarea><br>
+                <textarea id="issue" name="IssueDescription" rows="4" cols="50" required></textarea><br>
 
                 <button class="SubButton">Submit</button>
-            </form>
-        </div>
+            </form>  
+            <div id="thankYouMessage" style="display: none;">
+                <p>Thank you for contacting us! Your message has been submitted successfully.</p>
+            </div>           
+            <script>
+                import { createClient } from '@supabase/supabase-js';
+
+                const supabaseUrl = 'https://cqvibztazwigapisvsld.supabase.co';
+                const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNxdmlienRhendpZ2FwaXN2c2xkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDMwMzYzNzYsImV4cCI6MjAxODYxMjM3Nn0.pC6h_NstTKOsWiLu4u4VrWq5Lzaw0nHSdPMjIzbxA7c';
+                const supabase = createClient(supabaseUrl, supabaseKey);
+              
+                async function addContact(event) {
+                    event.preventDefault();
+                    console.log('Creating Contact');
+
+                    const name = document.getElementById("name").value;
+                    const email = document.getElementById("email").value;
+                    const issueDescription = document.getElementById("issueDescription").value;
+
+                    try {
+                        const response = await fetch('/api/submit-form', {
+                            method: 'POST',
+                            body: JSON.stringify({
+                                "name": name,
+                                "email": email,
+                                "issue_description": issueDescription
+                            }),
+                            headers: {
+                                "Content-type": "application/json; charset=UTF-8"
+                            }
+                        });
+
+                        if (response.status === 200) {
+                            console.log('Data submitted successfully');
+                            document.querySelector('form[name="ContactForm"]').style.display = 'none';
+                            document.getElementById('thankYouMessage').style.display = 'block';
+                        } else {
+                            throw new Error(await response.json());
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+
+                        var div = document.createElement('div');
+                        div.setAttribute('class', 'errorBox');
+                        div.setAttribute('id', 'errorBox');
+
+                        var h1 = document.createElement('h1');
+                        h1.innerHTML = `Error Occurred:`;
+
+                        var p = document.createElement('p');
+                        p.innerHTML = `${error.message}`;
+
+                        div.appendChild(h1);
+                        div.appendChild(p);
+                        document.body.appendChild(div);
+                    }
+                    };
+              </script>
+        </div> 
     </body>
 </html>
